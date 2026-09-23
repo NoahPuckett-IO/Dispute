@@ -1,0 +1,219 @@
+DISPUTE — APP STORE LISTING TEXT
+
+The copy that appears on the App Store product page, paste-ready. Last updated
+2026-09-15, for 1.1, the first version on Mistral.
+
+
+--- THE LIVE LISTING IS WRONG RIGHT NOW ----------------------------------------
+
+The product page on sale today was written for 1.0 and names **Gemini**. The app
+has not called Gemini since 1.1. That makes the live description a false
+statement about what leaves somebody's phone and who reads it, on the one field
+Apple checks the app against, and it is the reason this file was reopened.
+
+Nothing below is new writing for its own sake. The DESCRIPTION, WHAT'S NEW and
+PROMOTIONAL TEXT blocks are the replacements — paste each one over the
+corresponding field in App Store Connect and save.
+
+A text-only change to the description can be submitted on its own, without a new
+build: App Store Connect → Dispute → the current version → edit the field →
+Save → Submit for review. If the version is already "Ready for Sale", use
+"Add Version" or edit the metadata and submit the metadata change.
+
+Each block below is one field. Copy from the line under the heading down to the
+next heading. Character limits are noted where Apple enforces one; every block
+here is inside its limit.
+
+None of this is needed to send a build to TestFlight. Everything Beta App Review
+asks for — the beta description, what to test, the review notes and contact, the
+privacy answers, the two URLs — lives in "Beta App Review/" in the project root,
+one file per field, with the order to do them in. This file is only the App Store
+listing, for when the app goes on sale.
+
+
+================================================================================
+APP INFORMATION
+================================================================================
+
+--- NAME (30 characters max) ---------------------------------------------------
+Dispute: Argument Settler
+
+[This is what the live record is actually called — "Dispute" alone was taken, and
+the fallback rule below is what got used. Recorded here because this file said
+"Dispute" for a month after the decision was made, and the listing file
+disagreeing with the listing is how the rest of this went wrong.
+
+The name under the icon on the home screen does not have to match, and does not:
+it is "Dispute".]
+
+
+--- SUBTITLE (30 characters max) -----------------------------------------------
+For arguments going in circles
+
+
+--- CATEGORY -------------------------------------------------------------------
+Primary: Lifestyle
+Secondary: Productivity
+
+[Lifestyle over Productivity because the people who need this are not at work.
+Reconsider if the first testers turn out to be using it in meetings.]
+
+
+--- AGE RATING -----------------------------------------------------------------
+4+. The questionnaire is answered question by question in
+"Beta App Review/02-age-rating.txt".
+
+
+--- PRICING --------------------------------------------------------------------
+Free. No in-app purchases, no subscription, no ads.
+
+
+================================================================================
+DESCRIPTION (4000 characters max)
+================================================================================
+
+Some arguments go in circles. You have both made the same point four times, you
+both feel unheard, and neither of you can say what you are actually disagreeing
+about any more.
+
+Dispute is for that. One phone, two people, about fifteen minutes.
+
+HOW IT WORKS
+
+1. Say what the argument is, in one line, and put both your names in.
+
+2. Each of you takes the phone and writes your side properly, on your own, with
+the other person not reading over your shoulder.
+
+3. The app turns both sides into one list of points, shuffled together, with no
+names on it. You each go through the same list and tick what you agree with.
+Because you cannot tell whose point is whose, you end up judging the point.
+
+4. It shows you what you already agree on. In most arguments this is more than
+either person expected.
+
+5. Then it names the crux: the one question where, depending on the answer,
+either of you would change your mind. Not a summary, not a compromise, and not a
+verdict. One question, and something you could actually go and do to settle it.
+
+6. At the end you get the whole thing written up, which you can keep or share.
+
+WHAT IT WILL NOT DO
+
+It never takes a side. It does not tell you who is right, it does not score the
+argument, and it does not comment on your relationship. It has no opinion about
+either of you and it is not supposed to.
+
+WHAT IT COSTS
+
+Nothing. There is no account, no sign-in, no subscription and no ads. You do not
+need to make an account with anyone, and there is nothing to set up before you
+start.
+
+THE AI, AND WHAT LEAVES YOUR PHONE
+
+The list of points and the crux are written by an AI, and the first screen
+asks whether you want that before anything happens. The AI is off until you say
+yes.
+
+Say yes and what you both type is sent away to be read by an AI model, run by
+Mistral or by Cloudflare. It costs you nothing, and neither of them uses it to
+train anything. The app tells you all of this on that same first screen, before
+you type anything.
+
+Say no and the app still works: you write your own points, you name the crux
+together from a filled-in draft, and nothing leaves the phone. That is a complete
+way to use it and it is how the app started. You can change your mind either way
+in Settings.
+
+The one argument you have open is stored in one file on your phone. Deleting it
+in Settings deletes it. There is no cloud copy, no sync, and nothing on our end
+with your name on it, because there is no account to put a name in.
+
+
+================================================================================
+PROMOTIONAL TEXT (170 characters max)
+================================================================================
+
+Two people, one phone. Write your sides, tick the same list, and find the one
+question underneath the whole argument. No account, nothing to pay.
+
+
+================================================================================
+KEYWORDS (100 characters max, commas, no spaces)
+================================================================================
+
+argument,disagreement,conflict,couples,debate,crux,mediation,decide,fair,talk
+
+
+================================================================================
+WHAT'S NEW IN THIS VERSION (4000 characters max)
+================================================================================
+
+[1.1 went out with this field empty. Fill it in — the provider change is the
+single most visible thing in the release and the description described it wrongly
+for a month.]
+
+The AI is no longer Google's Gemini. What you both write is not used to train
+anybody's model now, which was not true before and is the clearest thing this
+change buys you.
+
+The AI is also off until you say yes. The first screen asks, and choosing "Do it
+by hand" means nothing leaves the phone at all.
+
+Fewer dead ends when the model is busy. The app now waits and tries again on its
+own instead of stopping, and if it still cannot get through it offers to finish
+the argument by hand rather than leaving you stuck.
+
+
+================================================================================
+SCREENSHOTS
+================================================================================
+
+"Beta App Review/screenshots/6.5-inch/" — seven screens at 1242 x 2688.
+"Beta App Review/screenshots/6.9-inch/" — the same seven at 1290 x 2796.
+
+Both in the order the App Store should show them. Retake with
+scripts/screenshots.sh, which now shoots both sizes.
+
+[Check these before submitting the text below. The AI card names the provider on
+screen, so any shot taken before the Mistral move shows "Gemini 3.6 Flash" and
+the old sentence about the free tier being used to improve Google's products —
+which is the same falsehood as the description, in a picture, where a text edit
+does not reach it.]
+
+
+================================================================================
+KEEP THESE TRUE
+================================================================================
+
+Five claims in the description are statements about the build, and the listing is
+what Apple checks the app against:
+
+1. "It never takes a side."
+2. "There is no cloud copy... nothing on our end with your name on it."
+3. "Say no and the app still works... nothing leaves the phone."
+4. "sent to Mistral, a French AI company" — the provider, by name.
+5. "it is not used to train anything" — true only while "Allow your interactions
+   to be used to train our models" is off in the Mistral console. It is an
+   account setting, not a property of the tier, and it can be turned back on by
+   anybody with access to that account.
+
+All five are true today.
+
+[4 and 5 are on this list because they are the two that broke. The provider moved
+in 1.1 and this file was updated; the live listing was not, and for a month the
+product page told people their arguments went to Google and might be used to
+improve Google's products. Neither had been true since the move.
+
+The lesson is narrow and worth writing down: `CloudEngine.providerName` made the
+*app* impossible to get wrong, and did nothing for the six fields that live in
+App Store Connect. Those are copies, they are not compiled, and nothing fails
+when they drift. Changing the provider means editing them by hand, in the same
+week, and checking the live page afterwards:
+
+    curl -s "https://itunes.apple.com/lookup?bundleId=com.jamesgpuckett.Dispute" \
+      | python3 -c "import json,sys; print(json.load(sys.stdin)['results'][0]['description'])"
+
+That prints what is actually on sale, which is the only version of this text that
+matters.]

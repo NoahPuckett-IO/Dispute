@@ -1,0 +1,59 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Debug transcripts. A whole argument in plain text, written by debug builds
+# only, and pulled off a simulator into whatever directory you were standing in.
+# This is the most sensitive thing the app can produce and it never belongs here.
+dispute-debug-*.txt
+
+# Secrets — never commit API keys.
+# Nothing in the app needs one any more: requests go through Firebase AI Logic
+# and the phone sends an App Check token rather than a credential. A key of your
+# own is optional, typed into Settings, and lives in the Keychain.
+#
+# Dispute/GoogleService-Info.plist is deliberately NOT ignored. It identifies the
+# Firebase project and ships inside the app bundle, so it is readable by anybody
+# with the .ipa; App Check is what stops it being useful to them. See
+# docs/ARCHITECTURE.md.
+Config/Secrets.xcconfig
+*.env
+
+# Where `xcodebuild -exportArchive` puts its working copy on the way to App
+# Store Connect. Empty after an upload-destination export, and an .ipa after a
+# local one — either way it is a build product, not source.
+UploadOut/
+
+# The Worker's toolchain. `package.json` and the lockfile are committed so the
+# wrangler version is pinned; what it installs is not.
+worker/node_modules/
+
+# Signing assets. Not secrets exactly — a certificate is the public half, and a
+# provisioning profile is a list of devices and entitlements Apple already has.
+# But neither belongs to the source: they expire, they are per-machine, and they
+# are re-downloaded from the developer portal in seconds. Committing them means
+# the repo carries a copy that is wrong within the year.
+*.mobileprovision
+*.cer
+*.p12
+
+# Firebase config for your own project (see README)
+Dispute/GoogleService-Info.plist
+transcripts/

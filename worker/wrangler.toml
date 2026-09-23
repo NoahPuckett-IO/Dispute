@@ -1,0 +1,26 @@
+name = "dispute-ai"
+main = "src/index.js"
+compatibility_date = "2026-08-05"
+
+# Everything here is public — it ends up readable in the deployed script. The one
+# secret is MISTRAL_API_KEY, which is set with `wrangler secret put` and never
+# written to this file. See README.md.
+[vars]
+# The Firebase project this app's App Check tokens are issued for. Taken from
+# GCM_SENDER_ID in Dispute/GoogleService-Info.plist — it is the project *number*,
+# not the project id (dispute-4ccdf), and a token minted for any other project is
+# rejected.
+FIREBASE_PROJECT_NUMBER = "792932176138"
+
+# An alias rather than a dated identifier, and deliberately not read from the
+# request. See `CloudEngine.model` for why the pin was abandoned: the dated one
+# stopped being callable on this account, every request 429'd, and the app
+# reported it as a spent allowance for six weeks. This is the line that stops a valid App Check token from a patched
+# client being turned into unlimited inference on the app's account: whatever the
+# caller asks for, this is what gets run. The two copies are a security boundary
+# rather than duplication — but they do have to be changed together.
+MODEL = "mistral-medium-latest"
+
+# Matches CloudEngine.maximumOutputTokens. A ceiling rather than a value: the app
+# asks for this much, and anything asking for more gets clamped to it.
+MAX_OUTPUT_TOKENS = "2000"

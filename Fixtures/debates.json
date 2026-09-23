@@ -1,0 +1,53 @@
+{
+  "_comment": "Tuning set for M5 crux detection. Supplied by Noah, including the expected crux for each debate — that column is the answer key. The measure of success is not whether the model outputs something plausible, but whether its crux matches expectedCrux in substance.",
+  "debates": [
+    {
+      "topic": "AI will create more jobs than it destroys",
+      "sideA": "New technologies have always created new industries and employment. AI will raise productivity and generate new kinds of work.",
+      "sideB": "This wave is different because AI automates cognitive work itself, potentially eliminating many jobs faster than new ones appear.",
+      "expectedCrux": "Whether AI-driven productivity creates enough new demand and occupations to offset automation, and over what time horizon."
+    },
+    {
+      "topic": "Universal basic income",
+      "sideA": "Everyone should receive an unconditional income to reduce poverty and prepare for automation.",
+      "sideB": "Guaranteed income weakens work incentives and is an inefficient use of public money.",
+      "expectedCrux": "Empirical disagreement about how people respond to unconditional cash and whether the benefits outweigh the costs."
+    },
+    {
+      "topic": "Nuclear power for climate change",
+      "sideA": "Nuclear energy is one of the safest low-carbon electricity sources and is necessary for decarbonization.",
+      "sideB": "It is too expensive, too slow to build, and poses waste and accident risks.",
+      "expectedCrux": "Whether cost and deployment speed matter more than nuclear's reliability and low emissions."
+    },
+    {
+      "topic": "Remote work vs. office work",
+      "sideA": "Most knowledge work can be done just as effectively from home, with happier employees.",
+      "sideB": "In-person work improves collaboration, mentoring, creativity, and organizational culture.",
+      "expectedCrux": "How much informal interaction contributes to long-term productivity compared with flexibility and autonomy."
+    },
+    {
+      "topic": "Regulating social media",
+      "sideA": "Platforms should moderate harmful misinformation and abusive content.",
+      "sideB": "Heavy moderation risks censorship and suppresses legitimate debate.",
+      "expectedCrux": "Where to draw the line between reducing harm and protecting free expression."
+    },
+    {
+      "topic": "College is worth the cost",
+      "sideA": "A degree still substantially increases lifetime earnings and opportunities.",
+      "sideB": "Tuition has risen so much that many degrees no longer justify their cost.",
+      "expectedCrux": "Whether the average return on higher education remains positive after accounting for debt, field of study, and alternatives."
+    },
+    {
+      "topic": "Open-source AI vs. closed AI",
+      "sideA": "Open models promote innovation, transparency, and broad access.",
+      "sideB": "Restricting advanced models reduces misuse and allows safer deployment.",
+      "expectedCrux": "Whether openness produces greater net benefits or greater net risks."
+    },
+    {
+      "topic": "Raising the minimum wage",
+      "sideA": "Higher minimum wages improve living standards with little effect on employment.",
+      "sideB": "Higher wage floors reduce hiring, especially for low-skill workers.",
+      "expectedCrux": "The size of the employment effects relative to the gains for workers who remain employed."
+    }
+  ]
+}

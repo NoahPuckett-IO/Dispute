@@ -1,0 +1,1 @@
+iOS app: so that when you have an argument 1. breaks down all assumptions recursively; 2. makes each side have to explain the other person's point(s) until they agree with the framing 3. finds the assumption(s) that you both disagree on to resolve the argument. Only needed installed for one party's iPhone. 

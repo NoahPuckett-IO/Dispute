@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  The app's privacy manifest.
+
+	  Required because Dispute calls UserDefaults, which is one of Apple's
+	  "required reason" APIs. Without this file the upload draws
+	  ITMS-91053 (Missing API declaration) by email and the submission is
+	  rejected — for a reason that has nothing to do with what the app does.
+
+	  Every other PrivacyInfo.xcprivacy in the built bundle belongs to Google:
+	  FirebaseCore, GoogleUtilities, Promises. Theirs cover their own code and
+	  say nothing about ours.
+
+	  Keep this in step with the App Privacy questionnaire in App Store
+	  Connect — see "Beta App Review/03-app-privacy.txt". If one changes and
+	  the other does not, the label and the binary disagree, which is the one
+	  discrepancy Apple checks automatically.
+	-->
+
+	<key>NSPrivacyTracking</key>
+	<false/>
+
+	<key>NSPrivacyTrackingDomains</key>
+	<array/>
+
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array>
+		<dict>
+			<!--
+			  What the two of them type: the subject of the argument, both
+			  positions, the list of points and both second looks. It goes to
+			  Google to be processed when, and only when, the AI has been
+			  turned on. No account, no identifier, and the names they enter
+			  are never sent.
+			-->
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeOtherUserContent</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+			</array>
+		</dict>
+	</array>
+
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<dict>
+			<!--
+			  CA92.1: reading and writing this app's own defaults. Whether the
+			  AI is on, whether the question has been answered, appearance and
+			  haptics. Nothing is read from any other app, and nothing here is
+			  sent anywhere.
+			-->
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<string>CA92.1</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
